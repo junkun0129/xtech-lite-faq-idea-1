@@ -10,9 +10,9 @@ const HomePage: React.FC = () => {
   return (
     <div className="flex min-h-screen">
       <Sidebar />
-      <div className="flex-1">
+      <div className="flex-1 bg-[#fff8f0]">
         <Header />
-        <main className="p-6">
+        <main className="p-8">
           <ArticleSection title="最近投稿" articles={RECENT_ARTICLES} />
           <FaqCtaCard />
           <ArticleSection title="自分の投稿" articles={MY_ARTICLES} />

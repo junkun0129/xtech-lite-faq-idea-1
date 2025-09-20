@@ -1,5 +1,5 @@
 {
-  "name": "XTECH LITE Clone",
-  "description": "A clone of a technical blog platform with an integrated technical Q&A forum. Users can browse articles and ask/answer technical questions in a supportive, anonymous environment.",
+  "name": "CodeCritters",
+  "description": "技術ブログとQ&Aフォーラムが統合された、かわいくて親しみやすいプラットフォーム。ユーザーは記事を読んだり、匿名のコミュニティで気軽に技術的な質問をしたりできます。",
   "requestFramePermissions": []
 }

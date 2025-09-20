@@ -3,7 +3,7 @@ import React from 'react';
 import { HomeIcon, AnnouncementIcon, UserGroupIcon } from './icons';
 
 const NavItem: React.FC<{ icon: React.ReactNode; label: string; active?: boolean }> = ({ icon, label, active }) => (
-  <a href="#" className={`flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 ${active ? 'bg-gray-200 font-semibold' : 'hover:bg-gray-100'}`}>
+  <a href="#" className={`flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 ${active ? 'bg-[#e3f6f5] font-semibold' : 'hover:bg-gray-100'}`}>
     {icon}
     <span>{label}</span>
   </a>
@@ -19,7 +19,7 @@ const CategoryLink: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 
 const Sidebar: React.FC = () => {
   return (
-    <aside className="w-64 h-screen sticky top-0 bg-white border-r border-gray-200 p-4 flex-shrink-0">
+    <aside className="w-64 h-screen sticky top-0 bg-[#fcfcff] border-r border-gray-200 p-4 flex-shrink-0">
       <nav className="flex flex-col gap-1">
         <NavItem icon={<HomeIcon className="w-5 h-5" />} label="ホーム" active />
         <NavItem icon={<AnnouncementIcon className="w-5 h-5" />} label="大事なお知らせ" />

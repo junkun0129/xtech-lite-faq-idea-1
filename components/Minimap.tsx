@@ -23,13 +23,13 @@ const Minimap: React.FC<MinimapProps> = ({ pan, zoom, mapDimensions, viewportDim
         width: (viewportDimensions.width / zoom) * scaleX,
         height: (viewportDimensions.height / zoom) * scaleY,
         transform: `translate(${-pan.x * scaleX}px, ${-pan.y * scaleY}px)`,
-        border: '2px solid #06b6d4',
-        backgroundColor: 'rgba(6, 182, 212, 0.3)',
+        border: '2px solid #38a1a8',
+        backgroundColor: 'rgba(56, 161, 168, 0.3)',
     };
 
     return (
         <div 
-            className="fixed bottom-6 right-6 z-20 bg-slate-800/50 backdrop-blur-md border-2 border-slate-600/50 rounded-lg shadow-2xl overflow-hidden"
+            className="fixed bottom-6 right-6 z-20 bg-white/50 backdrop-blur-md border-2 border-gray-300/50 rounded-lg shadow-2xl overflow-hidden"
             style={{ width: MINIMAP_SIZE, height: minimapHeight }}
             onMouseDown={(e) => e.stopPropagation()} // Prevent map pan
         >

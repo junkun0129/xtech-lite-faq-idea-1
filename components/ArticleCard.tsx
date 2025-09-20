@@ -12,16 +12,16 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
   const isHighlighted = article.id === 1 || article.id === 8;
   return (
     <div className="flex-shrink-0 w-64">
-      <div className="bg-white rounded-xl overflow-hidden cursor-pointer transform hover:-translate-y-1 transition-transform duration-200">
+      <div className="bg-[#fcfcff] rounded-xl overflow-hidden cursor-pointer transform hover:-translate-y-1 transition-transform duration-200 shadow-md hover:shadow-lg">
         <div className="h-40 bg-gray-200 flex items-center justify-center">
           {article.imageUrl ? (
             <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover" />
           ) : (
-            <HedgehogIcon className="w-24 h-24 text-gray-800" />
+            <HedgehogIcon className="w-24 h-24 text-gray-400" />
           )}
         </div>
         <div className="p-4">
-          <h4 className="font-semibold text-gray-800 truncate">{article.title}</h4>
+          <h4 className="font-semibold text-gray-700 truncate">{article.title}</h4>
           <div className="flex items-center gap-2 mt-2 text-xs text-gray-500">
             <div className="w-5 h-5 bg-gray-700 rounded-full"></div>
             <span>{article.author}</span>

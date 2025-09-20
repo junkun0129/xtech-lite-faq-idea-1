@@ -12,74 +12,74 @@ export const HedgehogIcon: React.FC<{ className?: string }> = ({ className }) =>
 
 export const RECENT_ARTICLES: Article[] = [
   { id: 1, title: "はじめてのMarkdownガイド", author: "XTECH LITE", date: "2025/8/13", likes: 2, comments: 2, imageUrl: "https://picsum.photos/seed/tech1/300/200" },
-  { id: 2, title: "Amazing Design Tips", author: "XTECH LITE", date: "2025/8/13", likes: 0, comments: 0 },
-  { id: 3, title: "UX Case Study: Mobile", author: "開発者S", date: "2025/8/13", likes: 0, comments: 1 },
-  { id: 4, title: "Startup Funding Guide", author: "開発者S", date: "2025/8/13", likes: 0, comments: 0 },
-  { id: 5, title: "AI for Beginners", author: "開発者S", date: "2025/8/13", likes: 1, comments: 1 },
-  { id: 6, title: "Cool CSS Hacks", author: "開発者S", date: "2025/8/13", likes: 0, comments: 0 },
-  { id: 7, title: "TypeScript Patterns", author: "開発者S", date: "2025/8/13", likes: 0, comments: 0 },
+  { id: 2, title: "すごいデザインのヒント", author: "XTECH LITE", date: "2025/8/13", likes: 0, comments: 0 },
+  { id: 3, title: "UXケーススタディ：モバイル", author: "開発者S", date: "2025/8/13", likes: 0, comments: 1 },
+  { id: 4, title: "スタートアップ資金調達ガイド", author: "開発者S", date: "2025/8/13", likes: 0, comments: 0 },
+  { id: 5, title: "初心者のためのAI", author: "開発者S", date: "2025/8/13", likes: 1, comments: 1 },
+  { id: 6, title: "おしゃれなCSSハック", author: "開発者S", date: "2025/8/13", likes: 0, comments: 0 },
+  { id: 7, title: "TypeScriptのデザインパターン", author: "開発者S", date: "2025/8/13", likes: 0, comments: 0 },
 ];
 
 export const MY_ARTICLES: Article[] = [
   { id: 8, title: "はじめてのMarkdownガイド", author: "XTECH LITE", date: "2025/8/13", likes: 2, comments: 2, imageUrl: "https://picsum.photos/seed/tech1/300/200" },
-  { id: 9, title: "Amazing Design Tips", author: "XTECH LITE", date: "2025/8/13", likes: 0, comments: 0 },
+  { id: 9, title: "すごいデザインのヒント", author: "XTECH LITE", date: "2025/8/13", likes: 0, comments: 0 },
 ];
 
 export const DRAFTS: Article[] = [
-  { id: 10, title: "New Article", author: "開発者S", date: "2025/9/14", likes: 0, comments: 0, isDraft: true },
-  { id: 11, title: "New Article", author: "開発者S", date: "2025/9/14", likes: 0, comments: 0, isDraft: true },
-  { id: 12, title: "New Article", author: "開発者S", date: "2025/9/14", likes: 0, comments: 0, isDraft: true },
-  { id: 13, title: "New Article", author: "開発者S", date: "2025/9/14", likes: 0, comments: 0, isDraft: true },
+  { id: 10, title: "新しい記事", author: "開発者S", date: "2025/9/14", likes: 0, comments: 0, isDraft: true },
+  { id: 11, title: "新しい記事", author: "開発者S", date: "2025/9/14", likes: 0, comments: 0, isDraft: true },
+  { id: 12, title: "新しい記事", author: "開発者S", date: "2025/9/14", likes: 0, comments: 0, isDraft: true },
+  { id: 13, title: "新しい記事", author: "開発者S", date: "2025/9/14", likes: 0, comments: 0, isDraft: true },
 ];
 
 export const BADGES: Record<string, Badge> = {
-  TOP_EXPERT: { id: 'TOP_EXPERT', name: 'Top Expert', description: 'Awarded for having 10+ best answers.', icon: '🏆', color: 'text-yellow-400' },
-  PROBLEM_SOLVER: { id: 'PROBLEM_SOLVER', name: 'Problem Solver', description: 'Awarded for solving 15+ questions.', icon: '✅', color: 'text-green-400' },
-  PROLIFIC_POSTER: { id: 'PROLIFIC_POSTER', name: 'Prolific Poster', description: 'Awarded for providing 20+ answers.', icon: '✍️', color: 'text-blue-400' },
-  REACT_GURU: { id: 'REACT_GURU', name: 'React Guru', description: 'A recognized expert in the React category.', icon: '⚛️', color: 'text-cyan-400' },
+  TOP_EXPERT: { id: 'TOP_EXPERT', name: 'トップエキスパート', description: 'ベストアンサーを10回以上獲得した証です。', icon: '🏆', color: 'text-yellow-400' },
+  PROBLEM_SOLVER: { id: 'PROBLEM_SOLVER', name: '問題解決のプロ', description: '15個以上の質問を解決に導きました。', icon: '✅', color: 'text-green-400' },
+  PROLIFIC_POSTER: { id: 'PROLIFIC_POSTER', name: '多作な投稿者', description: '20回以上の回答を投稿しました。', icon: '✍️', color: 'text-blue-400' },
+  REACT_GURU: { id: 'REACT_GURU', name: 'Reactの達人', description: 'Reactカテゴリーで認められた専門家です。', icon: '⚛️', color: 'text-cyan-400' },
 };
 
 export const RANKED_USERS: RankedUser[] = [
-    { id: 'user1', name: 'Helpful Hedgehog #1', avatar: '🦔', tags: ['React', 'TypeScript', 'Node.js'], answers: 25, solved: 20, bestAnswers: 15, badges: [BADGES.TOP_EXPERT, BADGES.PROBLEM_SOLVER, BADGES.PROLIFIC_POSTER, BADGES.REACT_GURU] },
-    { id: 'user2', name: 'Code Chameleon #2', avatar: '🦎', tags: ['Python', 'Django', 'Data Science'], answers: 22, solved: 18, bestAnswers: 10, badges: [BADGES.TOP_EXPERT, BADGES.PROBLEM_SOLVER, BADGES.PROLIFIC_POSTER] },
-    { id: 'user3', name: 'Syntax Sparrow #3', avatar: '🐦', tags: ['Java', 'Spring', 'SQL'], answers: 18, solved: 15, bestAnswers: 8, badges: [BADGES.PROBLEM_SOLVER] },
-    { id: 'user4', name: 'Logic Lion #4', avatar: '🦁', tags: ['Go', 'C#', '.NET'], answers: 15, solved: 11, bestAnswers: 5, badges: [] },
-    { id: 'user5', name: 'Debug Duck #5', avatar: '🦆', tags: ['PHP', 'Laravel', 'Vue'], answers: 12, solved: 9, bestAnswers: 4, badges: [] },
+    { id: 'user1', name: 'お助けハリネズミ #1', avatar: '🦔', tags: ['React', 'TypeScript', 'Node.js'], answers: 25, solved: 20, bestAnswers: 15, badges: [BADGES.TOP_EXPERT, BADGES.PROBLEM_SOLVER, BADGES.PROLIFIC_POSTER, BADGES.REACT_GURU] },
+    { id: 'user2', name: 'コードカメレオン #2', avatar: '🦎', tags: ['Python', 'Django', 'Data Science'], answers: 22, solved: 18, bestAnswers: 10, badges: [BADGES.TOP_EXPERT, BADGES.PROBLEM_SOLVER, BADGES.PROLIFIC_POSTER] },
+    { id: 'user3', name: 'シンタックスズメ #3', avatar: '🐦', tags: ['Java', 'Spring', 'SQL'], answers: 18, solved: 15, bestAnswers: 8, badges: [BADGES.PROBLEM_SOLVER] },
+    { id: 'user4', name: 'ロジックライオン #4', avatar: '🦁', tags: ['Go', 'C#', '.NET'], answers: 15, solved: 11, bestAnswers: 5, badges: [] },
+    { id: 'user5', name: 'デバッグダック #5', avatar: '🦆', tags: ['PHP', 'Laravel', 'Vue'], answers: 12, solved: 9, bestAnswers: 4, badges: [] },
 ].sort((a, b) => b.bestAnswers - a.bestAnswers);
 
 
 const BASE_QUESTIONS: Question[] = [
     {
         id: 1,
-        title: "How to properly center a div in CSS?",
-        content: "I've been trying to center a div both horizontally and vertically for ages. I've tried margin: auto, flexbox, grid, but something always seems to be off. What's the most reliable, modern way to do this for any situation?",
+        title: "CSSでdivを完璧に中央配置する方法は？",
+        content: "divを縦横中央に配置するのにずっと苦労しています。margin: auto、flexbox、gridなど色々試しましたが、何かがいつもずれてしまいます。どんな状況でも使える、信頼性が高くてモダンな方法は何でしょうか？",
         tags: ['css', 'flexbox', 'layout'],
         answers: [
-            { id: 1, author: RANKED_USERS[0], content: "Flexbox is your best friend here! Just set `display: flex`, `justify-content: center`, and `align-items: center` on the parent container. It's pretty much foolproof.", isBestAnswer: true },
-            { id: 2, author: RANKED_USERS[2], content: "For absolute positioning within a relative parent, you can use `position: absolute`, `top: 50%`, `left: 50%`, and `transform: translate(-50%, -50%)`. This is also a classic method.", isBestAnswer: false },
+            { id: 1, author: RANKED_USERS[0], content: "Flexboxが一番おすすめです！親コンテナに`display: flex`, `justify-content: center`, `align-items: center`を設定するだけ。ほぼ間違いなくうまくいきますよ。", isBestAnswer: true },
+            { id: 2, author: RANKED_USERS[2], content: "relativeな親要素内で絶対位置指定を使うなら、`position: absolute`, `top: 50%`, `left: 50%`, `transform: translate(-50%, -50%)`も古典的な良い方法です。", isBestAnswer: false },
         ]
     },
     {
         id: 2,
-        title: "What is the difference between `useEffect` and `useLayoutEffect` in React?",
-        content: "I understand that both hooks are used for side effects, but I'm not clear on the exact difference in their timing and when I should choose one over the other. Can someone explain with a simple example?",
+        title: "Reactの`useEffect`と`useLayoutEffect`の違いは何ですか？",
+        content: "どちらのフックも副作用のために使うことは理解していますが、実行タイミングの正確な違いや、どちらをいつ使うべきかが明確ではありません。簡単な例で説明していただけませんか？",
         tags: ['react', 'hooks', 'typescript'],
         answers: [
-            { id: 3, author: RANKED_USERS[0], content: "`useEffect` runs asynchronously after the render is painted to the screen, while `useLayoutEffect` runs synchronously before the browser paints. Use `useLayoutEffect` if you need to measure DOM elements or perform mutations that the user shouldn't see in a flicker.", isBestAnswer: false },
+            { id: 3, author: RANKED_USERS[0], content: "`useEffect`は画面描画後に非同期で実行されますが、`useLayoutEffect`はブラウザが描画する前に同期的に実行されます。DOM要素の測定や、ユーザーにちらつきを見せたくないDOMの変更を行う場合は`useLayoutEffect`を使用します。", isBestAnswer: false },
         ]
     }
 ];
 
 // Add more questions for a richer map
 const ADDITIONAL_QUESTIONS: Omit<Question, 'id' | 'answers'>[] = [
-  { title: "Grid vs Flexbox: Which to use?", content: "When building complex layouts, what are the deciding factors for choosing CSS Grid over Flexbox, or vice versa?", tags: ['css', 'layout', 'grid'] },
-  { title: "How to handle async operations in Redux?", content: "What is the standard way to manage asynchronous actions like API calls in a Redux application? I've heard of thunks and sagas.", tags: ['react', 'redux', 'async'] },
-  { title: "Best practices for REST API error handling?", content: "What are some best practices for designing error responses in a RESTful API? Should I use standard HTTP codes? What should the body contain?", tags: ['api', 'rest', 'node.js'] },
-  { title: "How to debounce a function in JavaScript?", content: "I have an event that fires very frequently, like a search input. How can I implement a debounce function from scratch to limit how often my function is called?", tags: ['javascript', 'performance'] },
-  { title: "What are generics in TypeScript?", content: "Can someone explain TypeScript generics with a practical example? I'm having trouble understanding how they make code more reusable.", tags: ['typescript', 'generics'] },
-  { title: "SQL 'JOIN' explained for beginners", content: "I'm new to SQL and find the different types of JOINs (INNER, LEFT, RIGHT, FULL) confusing. What's a simple way to remember the difference?", tags: ['sql', 'database'] },
-  { title: "Understanding the 'this' keyword in JavaScript", content: "The behavior of 'this' seems to change depending on how a function is called. Can someone break down the different contexts (global, object method, arrow function)?", tags: ['javascript', 'core-js'] },
-  { title: "Python virtual environments: why and how?", content: "Why are virtual environments so important in Python development, and what's the simplest way to create and manage them using `venv`?", tags: ['python', 'venv', 'dependency-management'] },
+  { title: "GridとFlexbox：どちらを使うべき？", content: "複雑なレイアウトを構築する際、CSS GridとFlexboxのどちらを選ぶべきか、その決定要因は何ですか？", tags: ['css', 'layout', 'grid'] },
+  { title: "Reduxで非同期処理をどう扱う？", content: "ReduxアプリケーションでAPI呼び出しのような非同期アクションを管理する標準的な方法は何ですか？thunkやsagaについて聞いたことがあります。", tags: ['react', 'redux', 'async'] },
+  { title: "REST APIのエラーハンドリングのベストプラクティスは？", content: "RESTful APIでエラーレスポンスを設計する際のベストプラクティスを教えてください。標準的なHTTPコードを使うべきですか？ボディには何を含めるべきですか？", tags: ['api', 'rest', 'node.js'] },
+  { title: "JavaScriptでdebounce関数を実装する方法", content: "検索入力のような非常に頻繁に発火するイベントがあります。関数の呼び出し頻度を制限するために、debounce関数をゼロから実装する方法はありますか？", tags: ['javascript', 'performance'] },
+  { title: "TypeScriptのジェネリクスとは？", content: "実践的な例を使ってTypeScriptのジェネリクスを説明していただけませんか？どのようにコードの再利用性を高めるのか理解に苦しんでいます。", tags: ['typescript', 'generics'] },
+  { title: "初心者向けSQL 'JOIN' の解説", content: "SQLを始めたばかりで、さまざまな種類のJOIN（INNER, LEFT, RIGHT, FULL）が紛らわしいです。違いを簡単に覚える方法はありますか？", tags: ['sql', 'database'] },
+  { title: "JavaScriptの'this'キーワードを理解する", content: " 'this'の挙動は関数の呼ばれ方によって変わるようです。異なるコンテキスト（グローバル、オブジェクトメソッド、アロー関数）について解説をお願いします。", tags: ['javascript', 'core-js'] },
+  { title: "Pythonの仮想環境：なぜ、そしてどうやって？", content: "なぜPython開発において仮想環境は重要なのでしょうか？また、`venv`を使って仮想環境を作成・管理する最も簡単な方法は何ですか？", tags: ['python', 'venv', 'dependency-management'] },
 ];
 
 export const ALL_QUESTIONS: Question[] = [
@@ -91,7 +91,7 @@ export const ALL_QUESTIONS: Question[] = [
         answers: Array.from({ length: Math.floor(Math.random() * 5) }, (_, j) => ({
             id: 100 + (i * 5) + j, // Generate unique-ish IDs for mock answers
             author: RANKED_USERS[Math.floor(Math.random() * RANKED_USERS.length)],
-            content: "This is a placeholder answer created for demonstration purposes.",
+            content: "これはデモンストレーション用に作成されたプレースホルダーの回答です。",
             isBestAnswer: false,
         })),
     }))
@@ -106,10 +106,10 @@ const GAP = 16;
 const REGION_PADDING = 24;
 
 export const CATEGORY_DEFINITIONS = [
-    { name: 'CSS', color: 'rgba(59, 130, 246, 0.1)', borderColor: '#3b82f6', tags: ['css', 'layout', 'grid'] },
-    { name: 'React', color: 'rgba(20, 184, 166, 0.1)', borderColor: '#14b8a6', tags: ['react', 'redux', 'hooks'] },
-    { name: 'JavaScript', color: 'rgba(245, 158, 11, 0.1)', borderColor: '#f59e0b', tags: ['javascript', 'typescript', 'core-js', 'generics'] },
-    { name: 'General', color: 'rgba(148, 163, 184, 0.1)', borderColor: '#94a3b8', tags: [] },
+    { name: 'CSS', color: 'rgba(110, 159, 255, 0.15)', borderColor: '#6e9fff', tags: ['css', 'layout', 'grid'] },
+    { name: 'React', color: 'rgba(70, 203, 144, 0.15)', borderColor: '#46cb90', tags: ['react', 'redux', 'hooks'] },
+    { name: 'JavaScript', color: 'rgba(255, 187, 95, 0.15)', borderColor: '#ffbb5f', tags: ['javascript', 'typescript', 'core-js', 'generics'] },
+    { name: 'General', color: 'rgba(188, 198, 224, 0.15)', borderColor: '#bcc6e4', tags: [] },
 ];
 
 const getRegionDefForTags = (tags: string[]): typeof CATEGORY_DEFINITIONS[0] => {

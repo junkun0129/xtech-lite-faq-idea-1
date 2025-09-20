@@ -164,14 +164,14 @@ const FaqPage: React.FC = () => {
   };
 
   const sortLabels: Record<SortOption, string> = {
-    'default': 'Default',
-    'most-answers': 'Most Answers',
-    'fewest-answers': 'Fewest Answers',
+    'default': 'デフォルト',
+    'most-answers': '回答が多い順',
+    'fewest-answers': '回答が少ない順',
   };
 
   return (
     <div 
-      className="w-screen h-screen bg-[#0a192f] overflow-hidden cursor-grab select-none relative"
+      className="w-screen h-screen bg-[#e3f6f5] overflow-hidden cursor-grab select-none relative"
       ref={mapRef}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
@@ -184,7 +184,7 @@ const FaqPage: React.FC = () => {
         className="absolute inset-0 z-0 opacity-50"
         style={{
           transform: `translate(${pan.x * 0.25}px, ${pan.y * 0.25}px) scale(${zoom})`,
-          backgroundImage: 'linear-gradient(rgba(20, 56, 102, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(20, 56, 102, 0.5) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(137, 221, 224, 0.7) 1px, transparent 1px), linear-gradient(90deg, rgba(137, 221, 224, 0.7) 1px, transparent 1px)',
           backgroundSize: '50px 50px',
         }}
       />
@@ -205,11 +205,11 @@ const FaqPage: React.FC = () => {
               height: region.height,
               backgroundColor: region.color,
               borderRadius: '20px',
-              boxShadow: `0 0 15px ${region.borderColor}, 0 0 30px ${region.borderColor}, inset 0 0 10px ${region.borderColor}`,
+              boxShadow: `0 8px 32px 0 ${region.borderColor}33`,
             }}
           >
             <h2 
-              className="text-8xl font-black text-white/5 uppercase tracking-widest"
+              className="text-8xl font-black text-[#272343]/5 uppercase tracking-widest"
               style={{ userSelect: 'none' }}
             >
               {region.name}
@@ -231,10 +231,10 @@ const FaqPage: React.FC = () => {
       
       {/* --- OVERLAY UI --- */}
        <div className="fixed bottom-6 left-6 z-20" onMouseDown={(e) => e.stopPropagation()}>
-         <div className="bg-slate-800/50 backdrop-blur-md rounded-lg p-2 flex flex-col gap-2 shadow-lg">
+         <div className="bg-white/50 backdrop-blur-md rounded-lg p-2 flex flex-col gap-2 shadow-lg">
            <button 
               onClick={() => resetView()} 
-              className="p-2 text-slate-300/70 hover:text-cyan-300 hover:bg-white/10 rounded-md transition-colors"
+              className="p-2 text-gray-600/70 hover:text-cyan-600 hover:bg-white/50 rounded-md transition-colors"
               aria-label="Reset View"
               title="Reset View"
             >
@@ -242,7 +242,7 @@ const FaqPage: React.FC = () => {
            </button>
            <button 
               onClick={() => setIsLeaderboardOpen(true)}
-              className="p-2 text-slate-300/70 hover:text-yellow-400 hover:bg-white/10 rounded-md transition-colors"
+              className="p-2 text-gray-600/70 hover:text-yellow-500 hover:bg-white/50 rounded-md transition-colors"
               aria-label="View Leaderboard"
               title="View Leaderboard"
             >
@@ -255,16 +255,16 @@ const FaqPage: React.FC = () => {
           className="fixed top-6 left-6 z-20"
           onMouseDown={(e) => e.stopPropagation()}
       >
-          <div className="bg-slate-900/40 backdrop-blur-sm text-white px-4 py-2 rounded-lg shadow-lg border border-slate-600/50">
-              <span className="text-xs uppercase tracking-wider text-slate-400">Current Zone</span>
-              <p className="font-bold text-lg text-slate-200">
-                  {currentRegion ? currentRegion.name : 'Free Exploration'}
+          <div className="bg-white/40 backdrop-blur-sm text-[#272343] px-4 py-2 rounded-lg shadow-lg border border-gray-300/50">
+              <span className="text-xs uppercase tracking-wider text-gray-500">現在のゾーン</span>
+              <p className="font-bold text-lg text-gray-700">
+                  {currentRegion ? currentRegion.name : '探検中'}
               </p>
           </div>
       </div>
 
       <div 
-        className="fixed top-6 left-1/2 -translate-x-1/2 z-20 bg-slate-900/40 backdrop-blur-md rounded-lg shadow-lg p-2 flex items-center gap-2 border border-slate-600/50" onMouseDown={(e) => e.stopPropagation()}
+        className="fixed top-6 left-1/2 -translate-x-1/2 z-20 bg-white/40 backdrop-blur-md rounded-lg shadow-lg p-2 flex items-center gap-2 border border-gray-300/50" onMouseDown={(e) => e.stopPropagation()}
       >
         {regions.map(region => {
           const isActive = currentRegion?.name === region.name;
@@ -292,28 +292,28 @@ const FaqPage: React.FC = () => {
        <div className="fixed top-[76px] left-1/2 -translate-x-1/2 z-20 flex items-center gap-2" onMouseDown={(e) => e.stopPropagation()}>
          {/* Search Bar */}
           <div className="relative">
-            <SearchIcon className="absolute top-1/2 left-3 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
+            <SearchIcon className="absolute top-1/2 left-3 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
             <input 
               type="text"
-              placeholder="Search questions..."
+              placeholder="質問をさがす..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-72 bg-slate-900/40 backdrop-blur-md rounded-lg shadow-lg pl-10 pr-4 py-2 text-slate-200 border border-slate-600/50 focus:ring-2 focus:ring-cyan-500 focus:outline-none transition-shadow"
+              className="w-72 bg-white/40 backdrop-blur-md rounded-lg shadow-lg pl-10 pr-4 py-2 text-gray-700 border border-gray-300/50 focus:ring-2 focus:ring-cyan-500 focus:outline-none transition-shadow"
             />
           </div>
           {/* Sort Dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-2 w-48 justify-between bg-slate-900/40 backdrop-blur-md rounded-lg shadow-lg px-4 py-2 text-slate-200 border border-slate-600/50 hover:border-slate-500 transition-colors">
-              <SortAscendingIcon className="w-5 h-5 text-slate-400" />
+            <button className="flex items-center gap-2 w-48 justify-between bg-white/40 backdrop-blur-md rounded-lg shadow-lg px-4 py-2 text-gray-700 border border-gray-300/50 hover:border-gray-400 transition-colors">
+              <SortAscendingIcon className="w-5 h-5 text-gray-400" />
               <span className="flex-grow text-left">{sortLabels[sortOption]}</span>
-              <span className="text-slate-400">▼</span>
+              <span className="text-gray-400">▼</span>
             </button>
-            <div className="absolute top-full mt-1 w-48 bg-slate-900/80 backdrop-blur-md rounded-lg border border-slate-600/50 shadow-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div className="absolute top-full mt-1 w-48 bg-white/80 backdrop-blur-md rounded-lg border border-gray-300/50 shadow-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               {(Object.keys(sortLabels) as SortOption[]).map(option => (
                  <button 
                     key={option}
                     onClick={() => setSortOption(option)}
-                    className={`block w-full text-left px-4 py-2 text-sm ${sortOption === option ? 'bg-cyan-500/20 text-cyan-300' : 'text-slate-200 hover:bg-slate-700/50'}`}
+                    className={`block w-full text-left px-4 py-2 text-sm ${sortOption === option ? 'bg-cyan-500/20 text-cyan-600' : 'text-gray-700 hover:bg-gray-400/20'}`}
                   >
                    {sortLabels[option]}
                  </button>
