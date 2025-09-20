@@ -1,0 +1,5 @@
+{
+  "name": "XTECH LITE Clone",
+  "description": "A clone of a technical blog platform with an integrated technical Q&A forum. Users can browse articles and ask/answer technical questions in a supportive, anonymous environment.",
+  "requestFramePermissions": []
+}
